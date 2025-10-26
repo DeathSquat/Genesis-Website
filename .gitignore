@@ -1,0 +1,182 @@
+# Logs and Debug Files
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Runtime and Process Files
+pids
+*.pid
+*.seed
+*.pid.lock
+.tern-port
+
+# Coverage and Testing
+coverage
+*.lcov
+.nyc_output
+lib-cov
+
+# Build Outputs and Distribution
+dist/
+build/
+out/
+storybook-static/
+.vuepress/dist
+
+# Vite Specific
+dist-ssr
+*.local
+
+# Dependencies and Package Managers
+node_modules/
+jspm_packages/
+web_modules/
+bower_components
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+.npm
+
+# Cache Directories
+.cache
+.parcel-cache
+.eslintcache
+.stylelintcache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+.turbo
+
+# TypeScript
+*.tsbuildinfo
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Framework Specific
+.next
+.nuxt
+.temp
+.docusaurus
+.serverless/
+.fusebox/
+.dynamodb/
+.grunt
+.lock-wscript
+build/Release
+
+# Deployment Platforms
+.vercel
+.netlify/
+amplify/
+.firebase/
+google-cloud/
+
+# IDE and Editor Files
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.iml
+*.ipr
+*.iws
+*.swp
+*.swo
+*.swn
+*~
+
+# OS Generated Files
+## Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+## macOS
+.DS_Store
+.DS_Store?
+._*
+.AppleDouble
+.LSOverride
+Icon
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+## Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Text Editors and IDEs
+## Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+## Emacs
+#*
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+## Vim
+*.swp
+*.swo
+*.swn
+
+# Temporary and Backup Files
+tmp/
+temp/
+*.tmp
+*.temp
+*.tgz
+*.tar.gz
+*.rar
+*.zip
+*.7z
+
+# Optional REPL History
+.node_repl_history
+
+# Yarn Integrity
+.yarn-integrity
+
+# Output Archives
+*.tgz
+
+# Miscellaneous
+.vscode-test
+.sentryclirc
+.storybook-out
+.local
