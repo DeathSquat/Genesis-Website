@@ -31,27 +31,38 @@ export default function LoadingScreen() {
       <div className="relative z-10 flex flex-col items-center justify-center gap-8">
         {/* Logo with animation */}
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-2xl opacity-50 animate-pulse"></div>
-          <div className="relative bg-background rounded-full p-6 border-2 border-primary/50">
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-J6ARhxLpa5E8zKDWzLVsoWOfHNREgU.png"
-              alt="zkGenesis"
-              width={80}
-              height={80}
-              className="w-20 h-20 animate-pulse"
-            />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-2xl blur-2xl opacity-30 animate-pulse"></div>
+          <div className="relative bg-background/80 backdrop-blur-sm rounded-2xl p-6 border-2 border-primary/30 shadow-2xl shadow-primary/20">
+            <div className="w-24 h-24 flex items-center justify-center">
+              <img
+                src="/genesis_logo.png"
+                alt="Genesis"
+                className="w-full h-full object-contain"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.onerror = null;
+                  target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ3aGl0ZSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBhbGlnbm1lbnQtYmFzZWxpbmU9Im1pZGRsZSIgZmlsbD0iIzAwMCI+RzwvdGV4dD48L3N2Zz4=';
+                }}
+              />
+            </div>
           </div>
         </div>
 
         {/* Loading text */}
         <div className="text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground">zkGenesis</h1>
-          <p className="text-lg text-foreground/60">Initializing the future of zero-knowledge...</p>
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            Genesis
+          </h1>
+          <div className="flex items-center justify-center gap-2">
+            <span className="h-0.5 w-8 bg-gradient-to-r from-transparent to-primary/50"></span>
+            <p className="text-lg text-foreground/70 font-medium">Initializing the future of zero-knowledge</p>
+            <span className="h-0.5 w-8 bg-gradient-to-l from-transparent to-accent/50"></span>
+          </div>
         </div>
 
-        {/* Animated loading bar */}
-        <div className="w-64 h-1 bg-border rounded-full overflow-hidden">
-          <div className="h-full bg-gradient-to-r from-primary via-accent to-primary animate-shimmer"></div>
+        {/* Loading bar */}
+        <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-background/30 overflow-hidden">
+          <div className="absolute top-0 left-0 h-full bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%] animate-gradient-shift rounded-r-full"></div>
         </div>
 
         {/* Loading dots */}

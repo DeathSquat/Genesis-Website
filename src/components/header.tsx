@@ -49,18 +49,23 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo with zkGenesis branding */}
-          <div className="flex items-center gap-3 group cursor-pointer">
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-J6ARhxLpa5E8zKDWzLVsoWOfHNREgU.png"
-              alt="zkGenesis Logo"
-              width={32}
-              height={32}
-              className="w-8 h-8 transition-transform duration-300 group-hover:scale-110"
-            />
-            <span className="font-bold text-xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent transition-all duration-300 group-hover:from-accent group-hover:to-primary">
-              zkGenesis
+          <a href="#" className="flex items-center gap-3 group">
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center transition-all duration-300 group-hover:rotate-6 group-hover:scale-110 overflow-hidden">
+              <img 
+                src="/genesis_logo.png" 
+                alt="Genesis Logo" 
+                className="w-full h-full object-contain p-1.5"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.onerror = null;
+                  target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ3aGl0ZSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBhbGlnbm1lbnQtYmFzZWxpbmU9Im1pZGRsZSIgZmlsbD0iIzAwMCI+RzwvdGV4dD48L3N2Zz4=';
+                }}
+              />
+            </div>
+            <span className="font-bold text-2xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent transition-all duration-300 group-hover:from-accent group-hover:to-primary">
+              Genesis
             </span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
